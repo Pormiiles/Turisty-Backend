@@ -1,5 +1,6 @@
 package br.ifba.turisty.domain.user.dtos;
 
+import br.ifba.turisty.domain.user.model.UserRoleEnum;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -21,4 +22,6 @@ public class UserRequestDTO {
     @NotNull(message = "O campo 'senha' não pode ser nulo!")
     @NotBlank(message = "O campo 'nome' não pode estar vazio!")
     private String password;
+
+    private UserRoleEnum role;
 }
